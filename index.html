@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<style>
+   #canvas{
+       border: 1px solid #aaa;
+       display: block;
+       /* position: absolute;
+       left: 0;
+       right: 0;
+       top: 0;
+       bottom: 0; */
+       margin: 0 auto;
+   }
+</style>
+<body>
+    <canvas id="canvas" width="1024" height="768" ></canvas>
+</body>
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("canvas")
+        var context = canvas.getContext("2d")
+        context.beginPath();
+        context.moveTo(100, 100)
+        context.lineTo(700, 700)
+        context.lineTo(100,700)
+        context.lineTo(100, 100)
+        context.closePath();
+        // context.fillStyle='rgb(2, 100, 100)';
+        // context.fill();
+        context.lineWidth=5;
+        context.strokeStyle='#005588';
+        context.stroke()
+        context.beginPath();
+        context.moveTo(200, 100)
+        context.lineTo(700, 600);
+        context.closePath();
+        context.strokeStyle = "black"
+        context.stroke();
+        
+        
+    }
+</script>
+</html>
